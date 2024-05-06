@@ -117,7 +117,3 @@ def init_session():
     st.session_state.messages.append(
         {"role": "assistant", "content": "你好，有什么可以帮助你吗？"}
     )
-
-
-if __name__ == "__main__":
-    main()
