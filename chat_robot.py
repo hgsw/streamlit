@@ -3,12 +3,23 @@ import pandas as pd
 import time
 import datetime
 
+
 # from streamlit_chatbox import *
 
 
 @st.cache_resource
 def load_data():
-    return pd.read_csv("/data/stream_env/aq_data.csv")
+    # return pd.read_csv("/data/stream_env/aq_data.csv")
+    df = pd.DataFrame(
+        {
+            "questions": ["什么是呼叫系统？", "我如何选择坐席？"],
+            "answer": [
+                "通俗理解就是可以打电话的系统。",
+                "1、您可以根据产品手册自行查阅相关的操作流程。2、您可以联系客服人员获取帮助。",
+            ],
+        }
+    )
+    return df
 
 
 def main():
